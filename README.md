@@ -7,13 +7,13 @@
 
 ## 0x02 使用
 
-#### 编码
+#### 2.1 编码
 
 ```java
 HackBCELs.encode("/tmp/Test.class");
 ```
 
-#### 解码
+#### 2.2 解码
 
 ```java
 String strBCEL = "$$BCEL$$...";
