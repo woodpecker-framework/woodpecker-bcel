@@ -7,6 +7,14 @@
 
 ## 0x02 使用
 
+```
+<dependency>
+  <groupId>me.gv7.woodpecker</groupId>
+  <artifactId>woodpecker-bcel</artifactId>
+  <version>0.1.0</version>
+</dependency>
+```
+
 #### 2.1 编码
 
 ```java
