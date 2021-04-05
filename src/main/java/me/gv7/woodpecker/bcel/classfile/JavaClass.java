@@ -65,7 +65,6 @@ import me.gv7.woodpecker.bcel.util.ClassQueue;
 import me.gv7.woodpecker.bcel.generic.Type;
 import me.gv7.woodpecker.bcel.generic.ClassGen;
 import me.gv7.woodpecker.bcel.util.Repository;
-import com.sun.org.apache.xalan.internal.utils.SecuritySupport;
 
 import  java.io.*;
 import  java.util.StringTokenizer;
@@ -455,9 +454,12 @@ public class JavaClass extends AccessFlags implements Cloneable, Node {
     String debug = null, sep = null;
 
     try {
-      debug = SecuritySupport.getSystemProperty("JavaClass.debug");
+      // 移除对com.sun.org.apache.xalan.internal.utils.SecuritySupport的依赖
+      //debug = SecuritySupport.getSystemProperty("JavaClass.debug");
+      debug = System.getProperty("JavaClass.debug");
       // Get path separator either / or \ usually
-      sep = SecuritySupport.getSystemProperty("file.separator");
+      //sep = SecuritySupport.getSystemProperty("file.separator");
+      sep = System.getProperty("file.separator");
     }
     catch (SecurityException e) {
         // falls through
